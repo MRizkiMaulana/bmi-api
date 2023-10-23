@@ -22,3 +22,4 @@ Route::post('/bmi', [BmiController::class, 'masukdata']);
 Route::get('/bmi', [BmiController::class, 'liatdata']);
 Route::get('/bmi/{bmiId}', [BmiController::class, 'lihatdataid']);
 Route::put('/bmi/{bmiId}', [BmiController::class, 'update']);
+Route::delete('/bmi/{bmiId}', [BmiController::class, 'destroy']);

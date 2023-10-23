@@ -111,5 +111,23 @@ class BmiController extends Controller
             'message' => 'Data berhasil diperbarui',
         ]);
     }
+    
+    public function destroy($bmiId)
+    {
+        $bmi = Bmi::find($bmiId);
+
+        if (!$bmi) {
+            return response()->json([
+                'status' => 'fail',
+                'message' => 'Gagal memperbarui data. Id tidak ditemukan'
+            ], 404);
+        }
+        $bmi->delete();
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Data berhasil dihapus'
+        ]);
+    }
 }
 
