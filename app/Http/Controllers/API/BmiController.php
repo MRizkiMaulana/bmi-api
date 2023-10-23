@@ -21,9 +21,11 @@ class BmiController extends Controller
         $hasil_bmi = $berat_badan / ($tinggi_meter * $tinggi_meter);
 
         $index_bmi = '';
-        if ($hasil_bmi >= 18.5 && $hasil_bmi <= 25) {
+        if ($hasil_bmi <= 18.4) {
+            $index_bmi = 'Kurus';
+        } else if ($hasil_bmi >= 18.5 && $hasil_bmi <= 25) {
             $index_bmi = 'Normal';
-        } elseif ($hasil_bmi > 25 && $hasil_bmi <= 27) {
+        } else if ($hasil_bmi > 25 && $hasil_bmi <= 27) {
             $index_bmi = 'Gemuk';
         } else {
             $index_bmi = 'Obesitas';
@@ -92,9 +94,11 @@ class BmiController extends Controller
         $hasil_bmi = $berat_badan / ($tinggi_meter * $tinggi_meter);
 
         $index_bmi = '';
-        if ($hasil_bmi >= 18.5 && $hasil_bmi <= 25) {
+        if ($hasil_bmi <= 18.4) {
+            $index_bmi = 'Kurus';
+        } else if ($hasil_bmi >= 18.5 && $hasil_bmi <= 25) {
             $index_bmi = 'Normal';
-        } elseif ($hasil_bmi > 25 && $hasil_bmi <= 27) {
+        } else if ($hasil_bmi > 25 && $hasil_bmi <= 27) {
             $index_bmi = 'Gemuk';
         } else {
             $index_bmi = 'Obesitas';
